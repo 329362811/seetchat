@@ -5,6 +5,28 @@
   box-sizing: border-box;
   border-bottom: 2rpx solid #dbdbdb;
 }
+.chat-container .van-tab {
+  font-size: 26rpx;
+}
+.chat-container .van-tab--active {
+  font-size: 40rpx;
+}
+.chat-container .van-tabs__nav--line {
+  width: 75vw;
+  border: none !important;
+}
+.chat-container [class*=van-hairline]::after {
+  border: none !important;
+}
+.chat-container .search-icon {
+  position: fixed;
+  top: 30rpx;
+  right: 0;
+  width: 25vw;
+  text-align: center;
+  line-height: 90rpx;
+  z-index: 99;
+}
 .chat-container .chat {
   background-color: #fff;
   box-sizing: border-box;

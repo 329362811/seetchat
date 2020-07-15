@@ -19,7 +19,7 @@
 		"uglifyFileName": true
 	},
 	"miniprogramRoot": "dist/wx/",
-	"compileType": "miniprogram",
+	"compileType": "plugin",
 	"appid": "wxd22d939d6cca6687",
 	"projectname": "guide",
 	"simulatorType": "wechat",

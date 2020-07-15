@@ -2,10 +2,10 @@
   <div class="counter-warp">
     <div class="header">
       <div class="header-content">
-        <img src="../../../static/images/im.png" class="icon">
+        <!-- <img src="../../../static/images/im.png" class="icon"> -->
         <div class="text">
-          <div class="text-header">登录 · 即时通信</div>
-          <div class="text-content">体验群组聊天，视频对话等IM功能</div>
+          <div class="text-header">登录</div><!--  · 即时通信 -->
+          <!-- <div class="text-content">体验群组聊天，视频对话等IM功能</div> -->
         </div>
       </div>
     </div>

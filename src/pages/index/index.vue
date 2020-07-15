@@ -7,88 +7,96 @@
     </div>
     <i-modal title="确认删除会话？" :visible="modalVisible" @ok="handleConfirm()" @cancel="handleModalShow">
     </i-modal>
-    <template v-for="item in allConversation">
-      <div class="chat"
-         v-if="item.type === 'C2C'"
-         :key="item.conversationID"
-         @longpress="longTimePress(item)"
-         @click="checkoutConversation(item, item.userProfile.nick || item.userProfile.userID)">
-        <div class="avatar-container">
-          <i-avatar :src="item.userProfile.avatar || '/static/images/avatar.png'" i-class="avatar" />
-        </div>
-        <div class="right">
-          <div class="information">
-            <div class="username">{{item.userProfile.nick || item.userProfile.userID}}</div>
-            <div class="content" v-if="!item.lastMessage.isRevoked">{{item.lastMessage.messageForShow}}</div>
-            <div class="content" v-else>
-              <template v-if="myInfo.userID === item.lastMessage.fromAccount">你撤回了一条消息</template>
-              <template v-else>{{item.lastMessage.fromAccount}}撤回了一条消息</template>
+
+    <van-icon class="search-icon" name="search" />
+    <van-tabs line-width="10px" color="#FFFFFF" v-model="active" animated>
+      <van-tab title="最新求聊">
+        <template v-for="item in allConversation">
+          <div class="chat"
+            v-if="item.type === 'C2C'"
+            :key="item.conversationID"
+            @longpress="longTimePress(item)"
+            @click="checkoutConversation(item, item.userProfile.nick || item.userProfile.userID)">
+            <div class="avatar-container">
+              <i-avatar :src="item.userProfile.avatar || '/static/images/avatar.png'" i-class="avatar" />
+            </div>
+            <div class="right">
+              <div class="information">
+                <div class="username">{{item.userProfile.nick || item.userProfile.userID}}</div>
+                <div class="content" v-if="!item.lastMessage.isRevoked">{{item.lastMessage.messageForShow}}</div>
+                <div class="content" v-else>
+                  <template v-if="myInfo.userID === item.lastMessage.fromAccount">你撤回了一条消息</template>
+                  <template v-else>{{item.lastMessage.fromAccount}}撤回了一条消息</template>
+                </div>
+              </div>
+              <div class="time">
+                <div class="last">{{item.lastMessage._lastTime}}</div>
+                <div class="remain" v-if="item.unreadCount > 0">
+                  <span v-if="item.unreadCount > 99" class="info">99+</span>
+                  <span v-else class="info">{{item.unreadCount}}</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="time">
-            <div class="last">{{item.lastMessage._lastTime}}</div>
-            <div class="remain" v-if="item.unreadCount > 0">
-              <span v-if="item.unreadCount > 99" class="info">99+</span>
-              <span v-else class="info">{{item.unreadCount}}</span>
+          <div class="chat"
+            v-else-if="item.type === 'GROUP'"
+            @click="checkoutConversation(item, item.groupProfile.name || item.groupProfile.ID)"
+            :key="item.conversationID"
+            @longpress="longTimePress(item)">
+            <div class="avatar-container">
+              <i-avatar :src="item.groupProfile.avatar" i-class="avatar" />
+            </div>
+            <div class="right">
+              <div class="information">
+                <div class="username">{{item.groupProfile.name || item.groupProfile.groupID}}</div>
+                <div class="content" v-if="!item.lastMessage.isRevoked">
+                  <template v-if="item.lastMessage.fromAccount === '@TIM#SYSTEM'">{{item.lastMessage.messageForShow}}</template>
+                  <template v-else>{{item.lastMessage.fromAccount}}：{{item.lastMessage.messageForShow}}</template>
+                </div>
+                <div class="content" v-else>
+                  <template v-if="myInfo.userID === item.lastMessage.fromAccount">你撤回了一条消息</template>
+                  <template v-else>{{item.lastMessage.fromAccount}}撤回了一条消息</template>
+                </div>
+              </div>
+              <div class="time">
+                <div class="last">{{item.lastMessage._lastTime}}</div>
+                <div class="remain" v-if="item.unreadCount > 0">
+                  <span v-if="item.unreadCount > 99" class="info">99+</span>
+                  <span v-else class="info">{{item.unreadCount}}</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="chat"
-         v-else-if="item.type === 'GROUP'"
-         @click="checkoutConversation(item, item.groupProfile.name || item.groupProfile.ID)"
-         :key="item.conversationID"
-         @longpress="longTimePress(item)">
-        <div class="avatar-container">
-          <i-avatar :src="item.groupProfile.avatar" i-class="avatar" />
-        </div>
-        <div class="right">
-          <div class="information">
-            <div class="username">{{item.groupProfile.name || item.groupProfile.groupID}}</div>
-            <div class="content" v-if="!item.lastMessage.isRevoked">
-              <template v-if="item.lastMessage.fromAccount === '@TIM#SYSTEM'">{{item.lastMessage.messageForShow}}</template>
-              <template v-else>{{item.lastMessage.fromAccount}}：{{item.lastMessage.messageForShow}}</template>
+          <div class="chat"
+              v-else-if="item.type === '@TIM#SYSTEM'"
+              @click="checkoutNotification(item)"
+              :key="item.conversationID"
+              @longpress="longTimePress(item)">
+            <div class="avatar-container">
+              <image src="/static/images/system.png" class="avatar" />
             </div>
-            <div class="content" v-else>
-              <template v-if="myInfo.userID === item.lastMessage.fromAccount">你撤回了一条消息</template>
-              <template v-else>{{item.lastMessage.fromAccount}}撤回了一条消息</template>
-            </div>
-          </div>
-          <div class="time">
-            <div class="last">{{item.lastMessage._lastTime}}</div>
-            <div class="remain" v-if="item.unreadCount > 0">
-              <span v-if="item.unreadCount > 99" class="info">99+</span>
-              <span v-else class="info">{{item.unreadCount}}</span>
+            <div class="right">
+              <div class="information">
+                <div class="username">系统通知</div>
+                <div class="content">点击查看</div>
+              </div>
+              <div class="time">
+                <div class="last"></div>
+                <div class="remain" v-if="item.unreadCount > 0">
+                  <span v-if="item.unreadCount > 99" class="info">99+</span>
+                  <span v-else class="info">{{item.unreadCount}}</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="chat"
-           v-else-if="item.type === '@TIM#SYSTEM'"
-           @click="checkoutNotification(item)"
-           :key="item.conversationID"
-           @longpress="longTimePress(item)">
-        <div class="avatar-container">
-          <image src="/static/images/system.png" class="avatar" />
-        </div>
-        <div class="right">
-          <div class="information">
-            <div class="username">系统通知</div>
-            <div class="content">点击查看</div>
-          </div>
-          <div class="time">
-            <div class="last"></div>
-            <div class="remain" v-if="item.unreadCount > 0">
-              <span v-if="item.unreadCount > 99" class="info">99+</span>
-              <span v-else class="info">{{item.unreadCount}}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
+        </template>
+      </van-tab>
+      <van-tab title="人气榜单">人气榜单</van-tab>
+      <van-tab title="同城">同城</van-tab>
+    </van-tabs>
+    
   </div>
 </template>
-
 <script>
 import { mapState, mapGetters } from 'vuex'
 import { throttle } from '../../utils/index'
@@ -182,6 +190,24 @@ export default {
   min-height 100vh
   box-sizing border-box
   border-bottom 1px solid $border-base
+  .van-tab
+    font-size 13px
+  .van-tab--active
+    font-size 20px
+  .van-tabs__nav--line
+	  width: 75vw
+	  border none !important
+  [class*=van-hairline]::after
+    border none !important
+  .search-icon
+    position fixed
+    top 30rpx
+    right 0
+    width 25vw
+    text-align center
+    line-height 45px
+    z-index 99
+
   .chat
     background-color white
     box-sizing border-box

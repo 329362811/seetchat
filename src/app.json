@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/login/main",
-    "pages/index/main",
     "pages/contact/main",
     "pages/own/main",
     "pages/chat/main",
@@ -15,10 +14,14 @@
     "pages/groups/main",
     "pages/blacklist/main",
     "pages/profile/main",
-    "pages/update-profile/main"
+    "pages/update-profile/main",
+    "pages/index/main",
+    "pages/searchIndex/main",
+    "pages/msgIndex/main",
+    "pages/settlement/main"
   ],
   "window": {
-    "backgroundColor": "#ededed",
+    "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ededed",
     "navigationBarTitleText": "WeChat",
@@ -26,7 +29,7 @@
   },
   "tabBar": {
     "color": "#000000",
-    "backgroundColor": "#ededed",
+    "backgroundColor": "#FFFFFF",
     "selectedColor": "#006fff",
     "borderStyle": "white",
 

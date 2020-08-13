@@ -10,7 +10,7 @@
 
     <van-icon class="search-icon" name="search" @click="onSearchIndex" />
     <van-tabs line-width="10px" color="#FFFFFF" v-model="active" animated>
-      <van-tab title="最新求聊">
+      <van-tab title="消息">
         <template v-for="item in allConversation">
           <div class="chat"
             v-if="item.type === 'C2C'"
@@ -91,98 +91,7 @@
           </div>
         </template>
       </van-tab>
-      <van-tab class="tabs-2" title="人气榜单">
-        <van-cell class="vanCell-33" title="女" is-link arrow-direction="down"/>
-					<van-cell class="vanCell-33" title="单量" is-link arrow-direction="down"/>
-					<van-cell class="vanCell-33" title="深圳" is-link arrow-direction="down"/>
-					<div class="vanDiv-img">
-            <img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-      </van-tab>
-      <van-tab class="tabs-3" title="同城">
-        <div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-title-right">1.6KM</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-					<div class="vanDiv-img">
-						<img  class="vanImage" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="Smiley face">
-						<!-- <van-image radius="5px" class="vanImage" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" /> -->
-						<div class="name-title">妲己nn</div>
-						<div class="name-vlog">一个来自江湖的大佬</div>
-					</div>
-      </van-tab>
+
     </van-tabs>
     
   </div>
@@ -284,59 +193,6 @@ export default {
   box-sizing border-box
   border-bottom 1px solid $border-base
 
-  .tabs-2
-    .vanCell-33
-      width 33%
-      float left
-    .vanDiv-img
-      margin 12px 0 0 4vw
-      width 44vw
-      float left
-      position relative
-      font-size 12px
-      color #ffffff
-      .vanImage
-        width 44vw
-        height 320rpx
-        object-fit cover
-        border-radius 5px
-      .name-title
-        margin-left 10px
-        position absolute
-        bottom 25px
-        font-size 13px
-      .name-vlog
-        margin-left 10px
-        position absolute
-        bottom 10px
-  .tabs-3
-    .vanDiv-img
-      margin 12px 0 0 4vw
-      width 44vw
-      float left
-      position relative
-      font-size 12px
-      color #ffffff
-      .vanImage
-        width 44vw
-        height 320rpx
-        object-fit cover
-        border-radius 5px
-      .name-title
-        margin-left 10px
-        position absolute
-        bottom 25px
-        font-size 14px
-      .name-title-right
-        position absolute
-        bottom 25px
-        right 10px
-        font-size: 12px;
-      .name-vlog
-        margin-left 10px
-        position absolute
-        bottom 10px
-
   .van-tab
     font-size 13px
   .van-tab--active
@@ -366,7 +222,7 @@ export default {
       padding 12px
       box-sizing border-box
       .avatar
-        border-radius 4px
+        border-radius 50%
         height 48px
         width 48px
 .information

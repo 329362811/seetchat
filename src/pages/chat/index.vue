@@ -110,7 +110,7 @@
               <div class="message" v-else-if="message.type === 'TIMCustomElem'">
                 <div v-if="message.payload.data === 'survey'" class="survey">
                   <div class="title">
-                    对IM DEMO的评分和建议
+                    评分和建议
                   </div>
                   <div class="description">
                     <i-rate
@@ -157,7 +157,13 @@
         </div>
       </li>
     </div>
-<!--    输入框及选择框部分-->
+
+    <div class="touLie">
+      <div class="cancelBtn" @click="AgreeAndPayFunc">忽略</div>
+      <button class="tiJiaoBut" @click="AgreeAndPayFunc">同意并支付</button>
+    </div>
+
+    <!--输入框及选择框部分-->
     <div class="bottom" :style="{ paddingBottom: isIphoneX ? safeBottom + 'px': '' }">
       <div class="bottom-div" :style="{marginBottom: isFocus ? '10px' : 0}">
         <div class="btn-left" @click="chooseRecord">
@@ -912,6 +918,11 @@ export default {
     // 撤回后时间限制内，重新编辑
     reEdit (message) {
       this.messageContent = message.payload.text
+    },
+    AgreeAndPayFunc(){
+      let url = '/pages/settlement/main'
+      wx.navigateTo({url})
+      //wx.reLaunch({url}) //即能跳转到tabBar页面，也能跳转到非tabBar页面，不带历史回退
     }
   },
   destory () {}
@@ -955,6 +966,36 @@ export default {
 .chat
   background-color white
   box-sizing border-box
+  
+  .touLie
+    background-color #FFFFFF
+    position fixed
+    bottom 0
+    left 0
+    width 100%
+    height 80px
+    line-height 80px
+    z-index 99
+    font-size 18px
+    .cancelBtn
+      width 45vw
+      float left
+      margin 16px 3vw
+      border solid 0px #FFFFFF !important
+      background #FFFFFF
+      height 46px
+      line-height 46px
+      text-align center
+      font-size 18px
+
+    .tiJiaoBut
+      width 45vw
+      float left
+      color white
+      background -webkit-gradient(linear, left top, right bottom, color-stop(10%, #1de7a7), color-stop(80%, #22d3f5))
+      border-radius 999px
+      margin 16px 0px
+      border solid 0px #FFFFFF !important
 .file
   display flex
   text-align left
@@ -963,6 +1004,7 @@ export default {
   font-size 14px
   background-color white
   padding 10px 8px
+      
 .bottom
   background-color $background
   position fixed

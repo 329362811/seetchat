@@ -1,0 +1,104 @@
+
+.index5.data-v-92d66998 {
+  padding: 0 30rpx;
+}
+.index5 .woDe.data-v-92d66998 {
+  height: 120rpx;
+  line-height: 160rpx;
+  font-weight: bold;
+  font-size: 46rpx;
+}
+.index5 .ziLiaoKa.data-v-92d66998 {
+  height: 200rpx;
+}
+.index5 .ziLiaoKa .touXiang.data-v-92d66998 {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50vw;
+  margin-top: 30rpx;
+}
+.index5 .ziLiaoKa .niCheng.data-v-92d66998 {
+  float: left;
+  font-size: 28rpx;
+  font-weight: bold;
+  width: 400rpx;
+  margin-top: 56rpx;
+  margin-bottom: 14rpx;
+}
+.index5 .ziLiaoKa .idHao.data-v-92d66998 {
+  float: left;
+  font-size: 24rpx;
+}
+.index5 .ziLiaoKa .jianTou.data-v-92d66998 {
+  margin-top: 10vw;
+  float: right;
+}
+.index5 .caiFuKa.data-v-92d66998 {
+  height: 300rpx;
+  padding: 30rpx 30rpx 0 40rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 0 4rpx 4rpx rgba(0,0,0,0.2);
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #22d3f5), color-stop(80%, #1de7a7));
+}
+.index5 .caiFuKa .caiFuColumnOne.data-v-92d66998 {
+  line-height: 48rpx;
+}
+.index5 .caiFuKa .caiFuColumnOne .oneLeft.data-v-92d66998 {
+  float: left;
+  font-size: 32rpx;
+}
+.index5 .caiFuKa .caiFuColumnOne .oneRight.data-v-92d66998 {
+  float: right;
+  font-size: 28rpx;
+  color: #fff;
+}
+.index5 .caiFuKa .caiFuColumnOne .oneLeftTwo.data-v-92d66998 {
+  float: left;
+  font-size: 26rpx;
+  margin-left: 0;
+}
+.index5 .caiFuKa .caiFuColumnTwo.data-v-92d66998 {
+  margin-top: 20rpx;
+  line-height: 180rpx;
+}
+.index5 .caiFuKa .caiFuColumnTwo .twoLeft.data-v-92d66998 {
+  float: left;
+  font-size: 100rpx;
+}
+.index5 .caiFuKa .caiFuColumnTwo .twoRight.data-v-92d66998 {
+  float: right;
+}
+.index5 .caiFuKa .caiFuColumnTwo .twoRight .twoRight-btn.data-v-92d66998 {
+  border-radius: 68rpx !important;
+  line-height: 34rpx !important;
+  height: 34rpx !important;
+  position: relative;
+  top: 42rpx;
+  min-width: 64rpx;
+  color: #07c160 !important;
+}
+.index5 .gongNengKa.data-v-92d66998 {
+  height: 400rpx;
+  margin-top: 50rpx;
+}
+.index5 .gongNengKa .gongNengLan.data-v-92d66998 {
+  padding-bottom: 20rpx;
+  margin-top: 30rpx;
+}
+.index5 .gongNengKa .gongNengLan .gongNengLanLeft.data-v-92d66998 {
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.index5 .gongNengKa .gongNengLan .gongNengLanRight.data-v-92d66998 {
+  float: left;
+  padding-top: 6rpx;
+  color: #000;
+  margin-left: 28rpx;
+}
+.index5 .gongNengKa .gongNengLan .gongNengIcon.data-v-92d66998 {
+  width: 62rpx;
+  height: 60rpx;
+}

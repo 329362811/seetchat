@@ -18,7 +18,8 @@
     "pages/index/main",
     "pages/searchIndex/main",
     "pages/msgIndex/main",
-    "pages/settlement/main"
+    "pages/settlement/main",
+    "pages/index5/main"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",
@@ -32,6 +33,7 @@
     "backgroundColor": "#FFFFFF",
     "selectedColor": "#006fff",
     "borderStyle": "white",
+
     "list": [
       {
         "text": "首页",
@@ -59,16 +61,16 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/own/main",
+        "pagePath": "pages/index5/main",
         "iconPath": "static/wode.png",
         "selectedIconPath": "static/wode_hover.png"
       }
     ],
     "position": "bottom"
   },
+
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

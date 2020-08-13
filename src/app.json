@@ -18,7 +18,8 @@
     "pages/index/main",
     "pages/searchIndex/main",
     "pages/msgIndex/main",
-    "pages/settlement/main"
+    "pages/settlement/main",
+    "pages/index5/main"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",
@@ -60,7 +61,7 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/own/main",
+        "pagePath": "pages/index5/main",
         "iconPath": "static/wode.png",
         "selectedIconPath": "static/wode_hover.png"
       }

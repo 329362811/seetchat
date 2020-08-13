@@ -16,7 +16,7 @@
     </i-cell-group>
     <i-cell-group i-class="cell-group">
       <i-cell title="修改资料" is-link url="../profile/main"></i-cell>
-      <i-cell title="退出登录" i-class="logout" @click="logout"></i-cell>
+      <i-cell title="出" i-class="logout" @click="logout"></i-cell>
     </i-cell-group>
   </div>
 </template>

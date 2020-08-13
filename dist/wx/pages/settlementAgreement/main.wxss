@@ -1,0 +1,12 @@
+
+.settlementAgreement.data-v-096f0e46 {
+  width: 100vw;
+  height: 500rpx;
+}
+.settlementAgreement .van-nav-bar.data-v-096f0e46 {
+  background-color: unset;
+}
+.settlementAgreement .head-div.data-v-096f0e46 {
+  padding: 60rpx 40rpx 0 40rpx;
+  line-height: 60rpx;
+}

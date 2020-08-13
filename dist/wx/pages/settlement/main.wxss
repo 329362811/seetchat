@@ -1,0 +1,99 @@
+
+.settlement .van-nav-bar__title {
+  color: #FFFFFF;
+}
+.settlement .van-nav-bar__left .van-icon {
+  color: #FFFFFF;
+}
+.settlement .van-dialog-div .van-dialog__footer {
+  display: none;
+}
+.settlement .settlement-img.data-v-65a3af8c {
+  width: 100vw;
+  height: 500rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.settlement .van-nav-bar.data-v-65a3af8c {
+  background-color: unset;
+}
+.settlement [class*=van-hairline].data-v-65a3af8c::after {
+  border: none;
+}
+.settlement .head-div.data-v-65a3af8c {
+  padding: 88rpx 40rpx 0 40rpx;
+  width: 100vw;
+  color: #fff;
+}
+.settlement .head-div ._h2.data-v-65a3af8c {
+  margin-top: 20rpx;
+}
+.settlement .jine-div.data-v-65a3af8c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.settlement .jine-div ._h1.data-v-65a3af8c {
+  font-size: 96rpx;
+}
+.settlement .jine-div .yfje.data-v-65a3af8c {
+  font-size: 44rpx;
+}
+.settlement .btn-div.data-v-65a3af8c {
+  position: absolute;
+  bottom: 160rpx;
+  width: 100vw;
+  text-align: center;
+}
+.settlement .btn-div .btn-ljgm.data-v-65a3af8c {
+  width: 70vw;
+  display: block;
+  margin: 0 auto;
+}
+.settlement .btn-div .btn-next-title.data-v-65a3af8c {
+  margin-top: 40rpx;
+}
+.settlement .btn-div .btn-next-title .btn-next-span.data-v-65a3af8c {
+  color: #07c160;
+}
+.settlement .van-dialog-div.data-v-65a3af8c {
+  width: 80vw;
+  height: 500rpx;
+}
+.settlement .van-dialog-div .van-icon-close.data-v-65a3af8c {
+  cursor: pointer;
+  position: absolute;
+  top: 56rpx;
+  left: 56rpx;
+}
+.settlement .van-dialog-div .jine-div2.data-v-65a3af8c {
+  text-align: center;
+}
+.settlement .van-dialog-div .jine-div2 ._h1.data-v-65a3af8c {
+  font-size: 80rpx;
+  margin: 0 0;
+}
+.settlement .van-dialog-div .jine-div2 .van-dialog__header.data-v-65a3af8c {
+  padding-top: 16rpx;
+}
+.settlement .van-dialog-div .posab-div.data-v-65a3af8c {
+  position: absolute;
+  bottom: 140rpx;
+  height: 100rpx;
+  width: 80vw;
+}
+.settlement .van-dialog-div .van-password-input__security.data-v-65a3af8c {
+  border: 2rpx solid #ebedf0;
+  border-top: none;
+  border-right: none;
+}
+.settlement .van-dialog-div .van-password-input__security ._li.data-v-65a3af8c {
+  border-right: 2rpx solid #ebedf0;
+}
+.settlement .van-number-keyboard.data-v-65a3af8c {
+  z-index: 9999;
+}

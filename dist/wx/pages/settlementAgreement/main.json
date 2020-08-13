@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "用户协议",
+  "disableSwipeBack": true,
+  "backgroundColor": "#e6e6e6",
+  "navigationBarBackgroundColor":"#ffffff",
+  "navigationBarTextStyle":"black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+  }
+}

@@ -1,0 +1,12 @@
+
+.searchIndex.data-v-589d8e2f {
+  width: 100vw;
+  height: 500rpx;
+}
+.searchIndex .van-nav-bar.data-v-589d8e2f {
+  background-color: unset;
+}
+.searchIndex .head-div.data-v-589d8e2f {
+  padding: 60rpx 20rpx 0 20rpx;
+  line-height: 60rpx;
+}

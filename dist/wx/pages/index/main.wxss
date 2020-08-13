@@ -1,9 +1,68 @@
 
 .chat-container {
-  background-color: #ededed;
   min-height: 100vh;
   box-sizing: border-box;
   border-bottom: 2rpx solid #dbdbdb;
+}
+.chat-container .tabs-2 .vanCell-33 {
+  width: 33%;
+  float: left;
+}
+.chat-container .tabs-2 .vanDiv-img {
+  margin: 24rpx 0 0 4vw;
+  width: 44vw;
+  float: left;
+  position: relative;
+  font-size: 24rpx;
+  color: #fff;
+}
+.chat-container .tabs-2 .vanDiv-img .vanImage {
+  width: 44vw;
+  height: 320rpx;
+  object-fit: cover;
+  border-radius: 10rpx;
+}
+.chat-container .tabs-2 .vanDiv-img .name-title {
+  margin-left: 20rpx;
+  position: absolute;
+  bottom: 50rpx;
+  font-size: 26rpx;
+}
+.chat-container .tabs-2 .vanDiv-img .name-vlog {
+  margin-left: 20rpx;
+  position: absolute;
+  bottom: 20rpx;
+}
+.chat-container .tabs-3 .vanDiv-img {
+  margin: 24rpx 0 0 4vw;
+  width: 44vw;
+  float: left;
+  position: relative;
+  font-size: 24rpx;
+  color: #fff;
+}
+.chat-container .tabs-3 .vanDiv-img .vanImage {
+  width: 44vw;
+  height: 320rpx;
+  object-fit: cover;
+  border-radius: 10rpx;
+}
+.chat-container .tabs-3 .vanDiv-img .name-title {
+  margin-left: 20rpx;
+  position: absolute;
+  bottom: 50rpx;
+  font-size: 28rpx;
+}
+.chat-container .tabs-3 .vanDiv-img .name-title-right {
+  position: absolute;
+  bottom: 50rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+}
+.chat-container .tabs-3 .vanDiv-img .name-vlog {
+  margin-left: 20rpx;
+  position: absolute;
+  bottom: 20rpx;
 }
 .chat-container .van-tab {
   font-size: 26rpx;
@@ -21,9 +80,9 @@
 .chat-container .search-icon {
   position: fixed;
   top: 30rpx;
-  right: 0;
-  width: 25vw;
-  text-align: center;
+  right: 5vw;
+  width: 20vw;
+  text-align: right;
   line-height: 90rpx;
   z-index: 99;
 }

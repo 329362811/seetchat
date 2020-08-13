@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/login/main",
-    "pages/index/main",
     "pages/contact/main",
     "pages/own/main",
     "pages/chat/main",
@@ -15,10 +14,14 @@
     "pages/groups/main",
     "pages/blacklist/main",
     "pages/profile/main",
-    "pages/update-profile/main"
+    "pages/update-profile/main",
+    "pages/index/main",
+    "pages/searchIndex/main",
+    "pages/msgIndex/main",
+    "pages/settlement/main"
   ],
   "window": {
-    "backgroundColor": "#ededed",
+    "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ededed",
     "navigationBarTitleText": "WeChat",
@@ -26,35 +29,46 @@
   },
   "tabBar": {
     "color": "#000000",
-    "backgroundColor": "#ededed",
+    "backgroundColor": "#FFFFFF",
     "selectedColor": "#006fff",
     "borderStyle": "white",
-
     "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/shouye.png",
+        "selectedIconPath": "static/shouye_hover.png"
+      },
+      {
+        "text": "关注",
+        "pagePath": "pages/contact/main",
+        "iconPath": "static/guanzhu_index.png",
+        "selectedIconPath": "static/guanzhu_index_hover.png"
+      },
+      {
+        "text": "",
+        "pagePath": "pages/contact/main",
+        "iconPath": "static/fabuxuqiu.png",
+        "selectedIconPath": "static/fabuxuqiu.png"
+      },
       {
         "text": "消息",
         "pagePath": "pages/index/main",
-        "iconPath": "static/theme/chat.png",
-        "selectedIconPath": "static/theme/chat-theme.png"
+        "iconPath": "static/xiaoxi_index.png",
+        "selectedIconPath": "static/xiaoxi_index_hover.png"
       },
       {
-        "text": "通讯录",
-        "pagePath": "pages/contact/main",
-        "iconPath": "static/theme/contact.png",
-        "selectedIconPath": "static/theme/contact-theme.png"
-      },
-      {
-        "text": "帐号",
+        "text": "我的",
         "pagePath": "pages/own/main",
-        "iconPath": "static/theme/own.png",
-        "selectedIconPath": "static/theme/own-theme.png"
+        "iconPath": "static/wode.png",
+        "selectedIconPath": "static/wode_hover.png"
       }
     ],
     "position": "bottom"
   },
-
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

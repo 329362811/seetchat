@@ -42,6 +42,37 @@
   background-color: #fff;
   box-sizing: border-box;
 }
+.chat .touLie {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160rpx;
+  line-height: 160rpx;
+  z-index: 99;
+  font-size: 36rpx;
+}
+.chat .touLie .cancelBtn {
+  width: 45vw;
+  float: left;
+  margin: 32rpx 3vw;
+  border: solid 0 #fff !important;
+  background: #fff;
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.chat .touLie .tiJiaoBut {
+  width: 45vw;
+  float: left;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #1de7a7), color-stop(80%, #22d3f5));
+  border-radius: 1998rpx;
+  margin: 32rpx 0;
+  border: solid 0 #fff !important;
+}
 .file {
   display: flex;
   text-align: left;

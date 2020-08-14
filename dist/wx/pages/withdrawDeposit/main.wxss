@@ -1,0 +1,35 @@
+
+.withdrawDeposit.data-v-1bbaf4d9 {
+  height: 1334rpx;
+  width: 100vw;
+  background-color: #f9f9fb;
+}
+.withdrawDeposit .moneyKa.data-v-1bbaf4d9 {
+  width: 100vw;
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.withdrawDeposit .moneyKa .moneyLie.data-v-1bbaf4d9 {
+  line-height: 80rpx;
+  font-size: 60rpx;
+  margin-top: 40rpx;
+  margin-bottom: 0;
+  padding-left: 0;
+  color: #000;
+}
+.withdrawDeposit .moneyKa .fenGeXian.data-v-1bbaf4d9 {
+  width: auto;
+  margin-right: 60rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 4rpx solid #f9f9fb;
+}
+.withdrawDeposit .tiJiaoBut.data-v-1bbaf4d9 {
+  width: 95%;
+  height: 88rpx;
+  border-radius: 42rpx;
+  color: #fff;
+  border: 0 solid;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #1de7a7), color-stop(80%, #22d3f5));
+}

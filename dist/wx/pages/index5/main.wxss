@@ -90,7 +90,7 @@
 .index5 .gongNengKa .gongNengLan .gongNengLanLeft.data-v-92d66998 {
   float: left;
   margin-left: 10rpx;
-  margin-top: 10rpx;
+  margin-top: 2rpx;
 }
 .index5 .gongNengKa .gongNengLan .gongNengLanRight.data-v-92d66998 {
   float: left;

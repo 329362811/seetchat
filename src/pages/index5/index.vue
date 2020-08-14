@@ -31,7 +31,7 @@
             <van-row class="caiFuColumnTwo" gutter="24">
                 <div class="twoLeft">6100</div>
                 <div class="twoRight">
-                    <i-button class="twoRight-btn" type="ghost" shape="circle">提现</i-button>
+                    <i-button @click="tiXian" class="twoRight-btn" type="ghost" shape="circle">提现</i-button>
                 </div>
             </van-row>
         </div>
@@ -52,6 +52,11 @@
 
 
 
+        <van-dialog v-model="serviceShow" title="确定拨打电话" confirmButtonText="拨打" 
+            cancelButtonText="取消" confirmButtonColor="#1DE7A7" show-cancel-button>
+            400-8161-666
+        </van-dialog>
+ 
     </div>
 
 </template>
@@ -63,8 +68,7 @@
         //基础数据存放处
         data (){
             return {
-               
-               
+               serviceShow: false,
             }
         },
 
@@ -101,26 +105,14 @@
             },
             //我的需求跳转
             xuQiuBut: function(){
-                this.$router.push('/myNeed');
+                //this.$router.push('/myNeed');
                 let url = "/pages/myNeed/main"
                 wx.navigateTo({url})
             },
             //客服咨询是否拨打电话
             keFuBut: function(){
-                Dialog.confirm(
-                    {
-                        title: '确定拨打电话',
-                        message: '400-8161-666',
-                        confirmButtonText: '拨打',
-                        cancelButtonText: "取消",
-                        confirmButtonColor: "#1DE7A7",
-                    }).then(() => {
-                        //alert("确定")
-                    }).catch(() => {
-                        //alert("取消")
-                    }
-                );
-            }
+                 this.serviceShow=true;
+            },
             
            
 
@@ -218,7 +210,7 @@
                 .gongNengLanLeft
                     float:left
                     margin-left:5px
-                    margin-top:5px
+                    margin-top:1px
                 .gongNengLanRight
                     float:left
                     padding-top:3px

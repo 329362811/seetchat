@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "提现",
   "disableSwipeBack": true,
   "backgroundColor": "#e6e6e6",
   "navigationBarBackgroundColor":"#ffffff",
@@ -18,8 +18,9 @@
     "van-row":"/static/vant/row/index",
     "van-col":"/static/vant/col/index",
     "van-dialog":"/static/vant/dialog/index",
+    "van-sticky":"/static/vant/sticky/index",
+    "van-nav-bar":"/static/vant/nav-bar/index",
+    "van-field":"/static/vant/field/index",
     "van-image":"/static/vant/image/index"
-
-    
   }
 }

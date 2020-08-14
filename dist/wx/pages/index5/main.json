@@ -19,5 +19,7 @@
     "van-col":"/static/vant/col/index",
     "van-dialog":"/static/vant/dialog/index",
     "van-image":"/static/vant/image/index"
+
+    
   }
 }

@@ -19,6 +19,8 @@
     "pages/searchIndex/main",
     "pages/msgIndex/main",
     "pages/settlement/main",
+    "pages/myNeed/main",
+    "pages/withdrawDeposit/main",
     "pages/index5/main"
   ],
   "window": {

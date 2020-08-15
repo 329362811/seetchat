@@ -11,18 +11,23 @@
   padding: 30rpx;
   font-size: 28rpx;
 }
-.withdrawDeposit .moneyKa .moneyLie.data-v-1bbaf4d9 {
+.withdrawDeposit .moneyKa .titleMoney.data-v-1bbaf4d9 {
+  margin-bottom: 40rpx;
+}
+.withdrawDeposit .moneyKa .moneyLabel.data-v-1bbaf4d9 {
+  font-size: 60rpx;
+}
+.withdrawDeposit .moneyKa .moneyInput.data-v-1bbaf4d9 {
+  float: left;
+  height: 80rpx;
+  width: 85vw;
   line-height: 80rpx;
   font-size: 60rpx;
-  margin-top: 40rpx;
-  margin-bottom: 0;
-  padding-left: 0;
-  color: #000;
+  border: 0;
 }
 .withdrawDeposit .moneyKa .fenGeXian.data-v-1bbaf4d9 {
   width: auto;
-  margin-right: 60rpx;
-  margin-bottom: 20rpx;
+  margin: 20rpx 20rpx 20rpx 0;
   border-bottom: 4rpx solid #f9f9fb;
 }
 .withdrawDeposit .tiJiaoBut.data-v-1bbaf4d9 {

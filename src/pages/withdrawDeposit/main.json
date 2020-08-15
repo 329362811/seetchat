@@ -10,6 +10,7 @@
     "i-col": "../../../static/iview/col/index",
     "i-modal": "../../../static/iview/modal/index",
     "i-button": "../../../static/iview/button/index",
+    "i-input": "../../../static/iview/input/index",
 
     "van-tab": "/static/vant/tab/index",
     "van-tabs": "/static/vant/tabs/index",

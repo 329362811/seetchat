@@ -8,17 +8,20 @@
                 :rules="[{ required: true, message: '请输入收款账号' }]" />
           
             <div class="moneyKa">
-                <div>提现金额</div>
+                <div class="titleMoney">提现金额</div>
                 <!-- 允许输入数字，调起带符号的纯数字键盘 -->
-                <van-field class="moneyLie" v-model="money" placeholder="请输入金额" label-width="22"
-                   type="number" label="￥" />
+                <van-row>
+                    <van-col span="4" class="moneyLabel">￥</van-col>
+                    <van-col span="20">
+                        <input  v-model="money" class="moneyInput" placeholder="请输入金额"
+                            @input="oninput"  :maxlength="moneyMaxLeng">
+                    </van-col>
+                </van-row>
                 <div class="fenGeXian"></div>
                 <div>可提现￥570</div>
             </div>
             <div style="margin: 16px;"> 
-                <button class="tiJiaoBut">
-                    提交
-                </button>
+                <button class="tiJiaoBut"> 提交</button>
             </div>
         
 
@@ -37,9 +40,9 @@
                shouKuanRen: '',
                shouKuanHao: '',
                money: null,
+               moneyMaxLeng: 8//规定最大可输入的长度
             }
         },
-
         //数据预加载
         created : function(){
             this.screenHeight = window.screenHeight;
@@ -51,8 +54,29 @@
         },
 
         //声明方法
-        methods : {
-          
+        methods : {    
+            //输入内容验证
+            oninput(e) {
+                this.$nextTick(() => {
+                let val = e.target.value.toString();
+                val = val.replace(/[^\d.]/g, ""); //清除"数字"和"."以外的字符
+                val = val.replace(/\.{2,}/g, "."); //只保留第一个. 清除多余的
+                val = val.replace(/^0+\./g, '0.');
+                val = val.match(/^0+[1-9]+/) ? val = val.replace(/^0+/g, '') : val
+                val = (val.match(/^\d*(\.?\d{0,2})/g)[0]) || ''
+
+                if (val.includes(".")) {
+                    let numDian = val.toString().split(".")[1].length;
+                    if (numDian === 2) {
+                    this.moneyMaxLeng = val.length;
+                    }
+                } else {
+                    this.moneyMaxLeng = 8;
+                }
+                this.money = val;
+                });
+            },
+
         },
 
         //计算属性
@@ -66,7 +90,6 @@
         }
     }
 </script>
-
 <style lang="stylus" scoped>
     .withdrawDeposit
         height:667px
@@ -78,17 +101,20 @@
             margin-top:15px
             padding:15px
             font-size:14px
-            .moneyLie
-                line-height:40px
+            .titleMoney
+                margin-bottom:20px
+            .moneyLabel
                 font-size:30px
-                margin-top:20px
-                margin-bottom:0px
-                padding-left:0px
-                color:#000000
+            .moneyInput
+                float:left;
+                height:40px;
+                width:85vw
+                line-height:40px;
+                font-size:30px;
+                border:0px;
             .fenGeXian
                 width:auto
-                margin-right:30px
-                margin-bottom:10px
+                margin:10px 10px 10px 0px
                 border-bottom:2px solid #F9F9FB
         .tiJiaoBut 
             width:95%
